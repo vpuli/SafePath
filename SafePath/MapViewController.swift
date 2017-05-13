@@ -40,8 +40,9 @@ class MapViewController: UIViewController {
     func mapView(mapView: AGSMapView!, didTapAtPoint screen: CGPoint, mapPoint mappoint: AGSPoint!) {
         
         //Add a feature at this point
-//        addFeature(mappoint)
+        addFeature(mappoint)
     }
+    
 /*
      
     func addFeature(point: AGSPoint!) {
