@@ -9,6 +9,7 @@
 import SwiftyJSON
 import UIKit
 import ArcGIS
+import PubNub
 
 //add corelocation
 
@@ -16,11 +17,18 @@ class MapViewController: UIViewController {
     @IBOutlet var mapView: AGSMapView!
 
     private var graphicsOverlay = AGSGraphicsOverlay()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let pubclient = appDelegate.client
+        self.text(client: pubclient!, number: "17326628487", message2: "You are an idiot")
+        // PubNub.client(self).text("7326628487", "Your a neck");
+     //   let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    //  let pubclient = appDelegate.client
+        //pubclient.text("7326628487","Your a neck");
         
-       
         var jsonData: Data?
         
         if let file = Bundle.main.path(forResource: "qb7u-rbmr", ofType: "json") {
@@ -36,7 +44,7 @@ class MapViewController: UIViewController {
             let jsonObject = try JSONSerialization.jsonObject(with: jsonData!, options: .allowFragments) as? [[String: AnyObject]]
             let jsonString = String(data: jsonData!, encoding: .utf8)
             
-            // print(currentConditions)
+            
             
         } catch let error as NSError {
             print(error)
@@ -62,7 +70,8 @@ class MapViewController: UIViewController {
         location.latitude = latitude
         location.longitude = longitude
         let center = AGSPoint(clLocationCoordinate2D: location)
-        // let center = AGSPoint(x: -226773, y: 6550477, spatialReference: AGSSpatialReference.webMercator())
+       
+        //change scale for zoom
         map.initialViewpoint = AGSViewpoint(center: center, scale: 6500)
         
         //assign map to the map view
@@ -77,23 +86,14 @@ class MapViewController: UIViewController {
     
         let json1 = try? JSON(data: jsonData!)
         
-    /*    for i = 0; i < json1!.array?.count; i++ {
-            let latstring = json1![0]["latitude"].stringValue
-            let latvalue = (latstring as NSString).doubleValue
-            let longstring = json1![0]["longitude"].stringValue
-            let longvalue = (longstring as NSString).doubleValue
-
-            self.addSimpleMarkerSymbol(lat: latvalue, lon: longvalue)
-            
-        }
-       */
+  
          for element in (json1?.array)! {
-         let latstring = element["latitude"].stringValue
-         let latvalue = (latstring as NSString).doubleValue
-         let longstring = element["longitude"].stringValue
-         let longvalue = (longstring as NSString).doubleValue
+            let latstring = element["latitude"].stringValue
+            let latvalue = (latstring as NSString).doubleValue
+            let longstring = element["longitude"].stringValue
+            let longvalue = (longstring as NSString).doubleValue
          
-         self.addSimpleMarkerSymbol(lat: latvalue, lon: longvalue)
+            self.addSimpleMarkerSymbol(lat: latvalue, lon: longvalue)
          
          }
  
@@ -104,7 +104,8 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
         
     }
-  /*
+  
+    /*
     func parseJSON{
         
         
@@ -113,7 +114,8 @@ class MapViewController: UIViewController {
     
     func addSimpleMarkerSymbol(lat: Double, lon: Double) {
         //create a simple marker symbol
-        let symbol = AGSSimpleMarkerSymbol(style: .circle, color: UIColor.red, size: 12)
+        let symbol = AGSSimpleMarkerSymbol(style: .circle, color: UIColor.red.withAlphaComponent(0.3), size: 12)
+        
         
         
         var longitude : CLLocationDegrees
@@ -136,6 +138,15 @@ class MapViewController: UIViewController {
         print("point added")
     }
     
+    func text(client: PubNub, number: String, message2: String){
+       let stringList = [number, message2];
+        client.publish().message(stringList).channel("sendclick-text")
+            .shouldStore(true)
+        print("published")
+        
+        
+                    
+    }
 
     /*
     // MARK: - Navigation
