@@ -19,6 +19,9 @@
 		A805F2A71EC7960A008AC801 /* SafePathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805F2A61EC7960A008AC801 /* SafePathTests.swift */; };
 		A805F2B21EC7960A008AC801 /* SafePathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805F2B11EC7960A008AC801 /* SafePathUITests.swift */; };
 		A805F2C01EC79D47008AC801 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805F2BF1EC79D47008AC801 /* MapViewController.swift */; };
+		A805F2C21EC7D0C8008AC801 /* NexmoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805F2C11EC7D0C8008AC801 /* NexmoViewController.swift */; };
+		A805F2C41EC810A0008AC801 /* qb7u-rbmr.json in Resources */ = {isa = PBXBuildFile; fileRef = A805F2C31EC810A0008AC801 /* qb7u-rbmr.json */; };
+		A805F2C61EC8183D008AC801 /* objectmapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805F2C51EC8183D008AC801 /* objectmapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		A805F2B11EC7960A008AC801 /* SafePathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafePathUITests.swift; sourceTree = "<group>"; };
 		A805F2B31EC7960A008AC801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A805F2BF1EC79D47008AC801 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A805F2C11EC7D0C8008AC801 /* NexmoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NexmoViewController.swift; sourceTree = "<group>"; };
+		A805F2C31EC810A0008AC801 /* qb7u-rbmr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "qb7u-rbmr.json"; sourceTree = "<group>"; };
+		A805F2C51EC8183D008AC801 /* objectmapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = objectmapper.swift; sourceTree = "<group>"; };
 		C848F8A40463C85E766EE3BB /* Pods-SafePath.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafePath.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafePath/Pods-SafePath.release.xcconfig"; sourceTree = "<group>"; };
 		D464323899C995F1F10FB844 /* Pods-SafePathTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafePathTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SafePathTests/Pods-SafePathTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED4BA8C24B70655FDF9A971F /* Pods-SafePathUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafePathUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SafePathUITests/Pods-SafePathUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A805F28E1EC7960A008AC801 /* AppDelegate.swift */,
+				A805F2C11EC7D0C8008AC801 /* NexmoViewController.swift */,
 				A805F2901EC7960A008AC801 /* ViewController.swift */,
 				A805F2921EC7960A008AC801 /* Main.storyboard */,
 				A805F2BF1EC79D47008AC801 /* MapViewController.swift */,
@@ -139,6 +146,8 @@
 				A805F29A1EC7960A008AC801 /* LaunchScreen.storyboard */,
 				A805F29D1EC7960A008AC801 /* Info.plist */,
 				A805F2951EC7960A008AC801 /* SafePath.xcdatamodeld */,
+				A805F2C31EC810A0008AC801 /* qb7u-rbmr.json */,
+				A805F2C51EC8183D008AC801 /* objectmapper.swift */,
 			);
 			path = SafePath;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A805F29C1EC7960A008AC801 /* LaunchScreen.storyboard in Resources */,
+				A805F2C41EC810A0008AC801 /* qb7u-rbmr.json in Resources */,
 				A805F2991EC7960A008AC801 /* Assets.xcassets in Resources */,
 				A805F2941EC7960A008AC801 /* Main.storyboard in Resources */,
 			);
@@ -457,7 +467,9 @@
 				A805F2911EC7960A008AC801 /* ViewController.swift in Sources */,
 				A805F2971EC7960A008AC801 /* SafePath.xcdatamodeld in Sources */,
 				A805F28F1EC7960A008AC801 /* AppDelegate.swift in Sources */,
+				A805F2C61EC8183D008AC801 /* objectmapper.swift in Sources */,
 				A805F2C01EC79D47008AC801 /* MapViewController.swift in Sources */,
+				A805F2C21EC7D0C8008AC801 /* NexmoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
