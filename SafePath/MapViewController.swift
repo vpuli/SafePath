@@ -11,11 +11,11 @@ import UIKit
 import ArcGIS
 import PubNub
 
-//add corelocation
-
 class MapViewController: UIViewController {
     @IBOutlet var mapView: AGSMapView!
 
+    var routeTask : AGSRouteTask!
+    
     private var graphicsOverlay = AGSGraphicsOverlay()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
