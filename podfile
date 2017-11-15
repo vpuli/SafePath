@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '10.0'
+
+target 'SafePath' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+ 
+  # Pods for SafePath
+  pod 'ArcGIS-Runtime-SDK-iOS', '100.0'
+  pod 'SwiftyJSON'
+  pod "PubNub", "~> 4"
+  pod 'GoogleMaps'
+  pod 'GooglePlaces' 
+
+  target 'SafePathTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SafePathUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,6 @@
+framework module Pods_SafePath {
+  umbrella header "Pods-SafePath-umbrella.h"
+
+  export *
+  module * { export * }
+}

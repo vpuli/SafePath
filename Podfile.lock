@@ -1,0 +1,31 @@
+PODS:
+  - ArcGIS-Runtime-SDK-iOS (100.0.0)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
+  - PubNub (4.5.15):
+    - PubNub/Core (= 4.5.15)
+  - PubNub/Core (4.5.15)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - ArcGIS-Runtime-SDK-iOS (= 100.0)
+  - GoogleMaps
+  - GooglePlaces
+  - PubNub (~> 4)
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  ArcGIS-Runtime-SDK-iOS: c96fbd2cf77678c75f54c69f341678fab2177bcf
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  PubNub: 5080a9cb739435e1efe0b47a00fd45d1188b5150
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: baa1d9b02aed781552ba096412e5e232c76e98c9
+
+COCOAPODS: 1.1.1
